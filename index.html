@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+    <script type="text/javascript" src="js/scripts.js"></script>
+    <title>Taller inicio</title>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark" id="navbar">
+      <a class="navbar-brand" href="#">Taller Cristian Fonseca</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="index.html">Calculadora<span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Link</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Dropdown
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="#">Action</a>
+              <a class="dropdown-item" href="#">Another action</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="#">Something else here</a>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link disabled" href="#">Disabled</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <div id=container>
+      <div id="operations">
+        <h3>Entrada de Datos</h3>
+        <label for="nOne">Numero Uno</label>
+        <input type="text" id="nOne" onkeypress="return validateNumber(event)"><br>
+        <label for="nTwo">Numero Dos</label>
+        <input type="text" id="nTwo" onkeypress="return validateNumber(event)">
+      </div>
+      <div id="options">
+        <h3>Opciones</h3>
+        <button type="button" class="btn btn-success" onclick="sumar()">Suma</button> &nbsp;
+        <button type="button" class="btn btn-danger" onclick="restar()">Resta</button> <br>
+        <button type="button" class="btn btn-warning" onclick="multiplicar()">Multiplicacion</button> &nbsp;
+        <button type="button" class="btn btn-info" onclick="dividir()">Divicion</button>
+      </div>
+      <div id="result">
+        &nbsp;
+      </div>
+    </div>
+  </body>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+</html>

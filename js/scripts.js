@@ -85,25 +85,25 @@ function palindroma(){
   cadenaInvertida=cadenaInvertida.toUpperCase();
   if(cadenaInvertida==cadena){
     aux=cadena+" -----> "+cadenaInvertida+" : Es palindromo";
-    gif_ok();
+    gif_ok("gif_p");
   }else {
     aux=cadena+" -----> "+cadenaInvertida+" : No es palindromo";
-    gif_NoOk();
+    gif_NoOk("gif_p");
   }
   h3.appendChild(document.createTextNode(aux));
   r.innerHTML="";
   r.appendChild(h3);
 }
-function gif_ok(){
-  var r = document.getElementById("gif_p");
+function gif_ok(id){
+  var r = document.getElementById(""+id+"");
   var imagen=document.createElement("img");
   imagen.setAttribute("src", "images/ok.gif");
   imagen.setAttribute("class","img-thumbnail");
   r.innerHTML="";
   r.appendChild(imagen);
 }
-function gif_NoOk(){
-  var r = document.getElementById("gif_p");
+function gif_NoOk(id){
+  var r = document.getElementById(""+id+"");
   var imagen=document.createElement("img");
   imagen.setAttribute("src", "images/noOk.gif");
   imagen.setAttribute("class","img-thumbnail");
@@ -130,6 +130,32 @@ function factorial(){
     }
   }
   h3.appendChild(document.createTextNode(fact));
+  r.innerHTML="";
+  r.appendChild(h3);
+}
+function capicua(){
+  var r = document.getElementById("result_c");
+  var h3 = document.createElement("h3");
+  var numero=parseInt(document.getElementById("number_c").value);
+  var invertido = 0;
+  var resto = numero;
+  var respuesta="";
+  do {
+    invertido = invertido * 10 + (resto % 10);
+    resto = Math.floor(resto / 10);
+  } while ( resto > 0 );
+  if (numero<10) {
+    respuesta="Ingrese un numero positivo y mayor a 10";
+  }else{
+    if (numero==invertido) {
+      respuesta=numero+" ---> "+invertido+" : es un numero Capicua";
+      gif_ok("gif_c");
+    }else {
+      respuesta=numero+" ---> "+invertido+" : no es un numero Capicua";
+      gif_NoOk("gif_c");
+    }
+  }
+  h3.appendChild(document.createTextNode(respuesta));
   r.innerHTML="";
   r.appendChild(h3);
 }

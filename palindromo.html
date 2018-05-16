@@ -36,7 +36,7 @@
     <div class="center">
       <h3>Verificar si una palabra es palindroma</h3>
       <label for="word">Ingrese una palabra</label>
-      <input type="text" id="word" onkeypress="return validateNoSpace(event)" required><br>
+      <input type="text" id="word" onkeypress="return validateNoSpace(event)" onkeypress="return validateNumber(event)" required><br>
     </div>
     <div class="center">
       <button type="submit" class="btn btn-primary" onclick="palindroma()">Verificar</button>

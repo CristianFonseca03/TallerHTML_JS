@@ -6,19 +6,19 @@
     <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="css/styles.css">
     <script type="text/javascript" src="js/scripts.js"></script>
-    <title>Taller inicio - Calculadora</title>
+    <title>Taller inicio - Factorial</title>
   </head>
   <body>
     <header>
       <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <a class="navbar-brand" href="#">Calculadora</a>
+        <a class="navbar-brand" href="index.html">Factorial</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav mr-auto">
-            <li class="nav-item active">
-              <a class="nav-link" href="index.html">Calculadora<span class="sr-only">(current)</span></a>
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Calculadora</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="palindromo.html">Palindromo</a>
@@ -26,30 +26,13 @@
             <li class="nav-item">
               <a class="nav-link" href="capicua.html">Capicua</a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="factorial.html">Factorial</a>
+            <li class="nav-item active">
+              <a class="nav-link" href="factorial.html">Factorial<span class="sr-only">(current)</span></a>
             </li>
           </ul>
         </div>
       </nav>
     </header>
-      <div class="center">
-        <h3>Entrada de Datos</h3>
-        <label for="nOne">Numero Uno</label>
-        <input type="number" id="nOne" onkeypress="return validateNumber(event)"><br>
-        <label for="nTwo">Numero Dos</label>
-        <input type="number" id="nTwo" onkeypress="return validateNumber(event)">
-      </div>
-      <div class="center">
-        <h3>Opciones</h3>
-        <button type="button" class="btn btn-success " onclick="sumar()">Suma</button>
-        <button type="button" class="btn btn-danger" onclick="restar()">Resta</button>
-        <button type="button" class="btn btn-warning" onclick="multiplicar()">Multiplicacion</button>
-        <button type="button" class="btn btn-info" onclick="dividir()">Division</button>
-      </div>
-      <div class="center" id="result">
-        &nbsp;
-      </div>
   </body>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
   <script src="js/bootstrap.min.js"></script>

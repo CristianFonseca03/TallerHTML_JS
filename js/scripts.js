@@ -110,3 +110,26 @@ function gif_NoOk(){
   r.innerHTML="";
   r.appendChild(imagen);
 }
+function factorial(){
+  var fact="";
+  var nOne = parseInt(document.getElementById("number").value);
+  var nOne_r=parseInt(document.getElementById("number").value);
+  var r = document.getElementById("result_f");
+  var h3 = document.createElement("h3");
+  nOne=Math.abs(nOne);
+  if(nOne==0){
+    fact="El factorial de 0 es 1";
+  }else{
+    var total = 1;
+  	for (i=1; i<=nOne; i++) {
+  		total = total * i;
+  	}
+    fact="El factorial de "+nOne+" es "+total;
+    if(nOne_r<0){
+      fact="El factorial de -"+nOne+" es -"+total;
+    }
+  }
+  h3.appendChild(document.createTextNode(fact));
+  r.innerHTML="";
+  r.appendChild(h3);
+}

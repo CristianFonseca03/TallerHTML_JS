@@ -36,7 +36,13 @@
     <div class="center">
       <h3>Factorial de un numero</h3>
       <label for="number">Ingrese un numero</label>
-      <input type="number" id="number" required><br>
+      <input type="number" id="number" min="-100" max="100"><br>
+    </div>
+    <div class="center">
+      <button type="submit" class="btn btn-primary" onclick="factorial()">Factorial</button>
+    </div>
+    <div class="center" id="result_f">
+      &nbsp;
     </div>
   </body>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>

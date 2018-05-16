@@ -1,12 +1,12 @@
-body{
-  text-align: center;
+body {
+  background-image: url("../images/fondo.jpg");
 }
-
 #container{
   width: 510px;
   margin: 10px auto;
   text-align: left;
   border: 5px solid #2e2efe;
+  background-color: #F5F6CE;
 }
 
 #read-input{
@@ -22,6 +22,10 @@ body{
   margin: 10px;
   background-color: #F5F6CE;
   float: left;
+}
+
+#options{
+  background-color: #F5F6CE;
 }
 
 #read-input h3{

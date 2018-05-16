@@ -63,3 +63,50 @@ function validateNumber(e){
   }
   return false;
 }
+function validateNoSpace(e){
+  var code = window.event ? e.which : e.keyCode;
+  if ((code >= 48 && code <=57)||(code==32)) {
+    return false;
+  }
+  return true;
+}
+function palindroma(){
+  var aux="";
+  var r = document.getElementById("result_p");
+  var h3 = document.createElement("h3");
+  var cadena=document.getElementById("word").value;
+  var x = cadena.length;
+  var cadenaInvertida = "";
+  while (x>=0) {
+    cadenaInvertida = cadenaInvertida + cadena.charAt(x);
+    x--;
+  }
+  cadena=cadena.toUpperCase();
+  cadenaInvertida=cadenaInvertida.toUpperCase();
+  if(cadenaInvertida==cadena){
+    aux=cadena+" -----> "+cadenaInvertida+" : Es palindromo";
+    gif_ok();
+  }else {
+    aux=cadena+" -----> "+cadenaInvertida+" : No es palindromo";
+    gif_NoOk();
+  }
+  h3.appendChild(document.createTextNode(aux));
+  r.innerHTML="";
+  r.appendChild(h3);
+}
+function gif_ok(){
+  var r = document.getElementById("gif_p");
+  var imagen=document.createElement("img");
+  imagen.setAttribute("src", "images/ok.gif");
+  imagen.setAttribute("class","img-thumbnail");
+  r.innerHTML="";
+  r.appendChild(imagen);
+}
+function gif_NoOk(){
+  var r = document.getElementById("gif_p");
+  var imagen=document.createElement("img");
+  imagen.setAttribute("src", "images/noOk.gif");
+  imagen.setAttribute("class","img-thumbnail");
+  r.innerHTML="";
+  r.appendChild(imagen);
+}
